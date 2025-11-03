@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 
 function TodoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
+  const [priority, setPriority] = useState(props.edit ? props.edit.priority : 'Medium');
+  const [dueDate, setDueDate] = useState(props.edit ? props.edit.dueDate : '');
 
   const inputRef = useRef(null);
 
@@ -13,14 +15,26 @@ function TodoForm(props) {
     setInput(e.target.value);
   };
 
+  const handlePriorityChange = e => {
+    setPriority(e.target.value);
+  };
+
+  const handleDueDateChange = e => {
+    setDueDate(e.target.value);
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
 
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
-      text: input
+      text: input,
+      priority: priority,
+      dueDate: dueDate
     });
     setInput('');
+    setPriority('Medium');
+    setDueDate('');
   };
 
   return (
@@ -48,6 +62,17 @@ function TodoForm(props) {
             name='text'
             className='todo-input'
             ref={inputRef}
+          />
+          <select value={priority} onChange={handlePriorityChange} className='todo-select'>
+            <option value='High'>High</option>
+            <option value='Medium'>Medium</option>
+            <option value='Low'>Low</option>
+          </select>
+          <input
+            type='date'
+            value={dueDate}
+            onChange={handleDueDateChange}
+            className='todo-date'
           />
           <button onClick={handleSubmit} className='todo-button'>
             Add todo

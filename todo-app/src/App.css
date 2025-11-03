@@ -106,15 +106,15 @@ h1 {
   width: 90%;
 }
 
-.todo-row:nth-child(4n + 1) {
+.todo-row.High {
   background: linear-gradient(
     90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
+    rgba(255, 0, 0, 1) 0%,
+    rgba(200, 0, 0, 1) 100%
   );
 }
 
-.todo-row:nth-child(4n + 2) {
+.todo-row.Medium {
   background: linear-gradient(
     90deg,
     rgba(255, 12, 241, 1) 0%,
@@ -122,7 +122,7 @@ h1 {
   );
 }
 
-.todo-row:nth-child(4n + 3) {
+.todo-row.Low {
   background: linear-gradient(
     90deg,
     rgba(20, 159, 255, 1) 0%,
@@ -144,4 +144,42 @@ h1 {
 
 .edit-icon {
   color: #fff;
+}
+
+.progress-container {
+  width: 90%;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 20px;
+  background-color: #4caf50;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.todo-select, .todo-date {
+  padding: 14px 16px;
+  border-radius: 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  margin-left: 4px;
+}
+
+.todo-select option {
+  background: #161a2b;
+}
+
+.todo-subtext {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
 }

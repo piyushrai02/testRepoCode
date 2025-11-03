@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
+import Progress from './Progress';
 
 const Todo = () => {
   const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem('todos'));
+    if (storedTodos) {
+      setTodos(storedTodos);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = todo => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
@@ -35,9 +47,13 @@ const Todo = () => {
     setTodos(updatedTodos);
   };
 
+  const completedTodos = todos.filter(todo => todo.isComplete).length;
+  const totalTodos = todos.length;
+
   return (
     <div>
       <h1>What's the Plan for Today?</h1>
+      <Progress completed={completedTodos} total={totalTodos} />
       <TodoForm onSubmit={addTodo} />
       <TodoList
         todos={todos}
