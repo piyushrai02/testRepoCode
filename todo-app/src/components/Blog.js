@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import BlogForm from './BlogForm';
 import BlogList from './BlogList';
 
-const Blog = () => {
+const Blog = ({ token }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -39,11 +39,12 @@ const Blog = () => {
   return (
     <div>
       <h1>My Professional Blog</h1>
-      <BlogForm onSubmit={addPost} />
+      {token && <BlogForm onSubmit={addPost} />}
       <BlogList
         posts={posts}
         removePost={removePost}
         updatePost={updatePost}
+        token={token}
       />
     </div>
   );

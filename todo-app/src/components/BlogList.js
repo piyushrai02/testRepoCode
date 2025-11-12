@@ -3,7 +3,7 @@ import BlogForm from './BlogForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
 
-const BlogList = ({ posts, removePost, updatePost }) => {
+const BlogList = ({ posts, removePost, updatePost, token }) => {
   const [edit, setEdit] = useState({
     id: null,
     title: '',
@@ -21,7 +21,7 @@ const BlogList = ({ posts, removePost, updatePost }) => {
     });
   };
 
-  if (edit.id) {
+  if (edit.id && token) { // Only allow editing if token is present
     return <BlogForm edit={edit} onSubmit={submitUpdate} />;
   }
 
@@ -32,16 +32,18 @@ const BlogList = ({ posts, removePost, updatePost }) => {
         <p>{post.content}</p>
         <p className='blog-author'>- {post.author}</p>
       </div>
-      <div className='icons'>
-        <RiCloseCircleLine
-          onClick={() => removePost(post.id)}
-          className='delete-icon'
-        />
-        <TiEdit
-          onClick={() => setEdit({ id: post.id, title: post.title, content: post.content, author: post.author })}
-          className='edit-icon'
-        />
-      </div>
+      {token && ( // Conditionally render icons based on token
+        <div className='icons'>
+          <RiCloseCircleLine
+            onClick={() => removePost(post.id)}
+            className='delete-icon'
+          />
+          <TiEdit
+            onClick={() => setEdit({ id: post.id, title: post.title, content: post.content, author: post.author })}
+            className='edit-icon'
+          />
+        </div>
+      )}
     </div>
   ));
 };
