@@ -14,7 +14,7 @@ const Signup = () => {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/signup', {
+Move the API URL to an environment variable (e.g., process.env.REACT_APP_API_URL) to support different environments and avoid exposing internal infrastructure details
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
