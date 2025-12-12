@@ -9,6 +9,8 @@ const PORT = 5000;
 const SECRET_KEY = 'supersecretkey'; // In a real app, use environment variables
 
 app.use(bodyParser.json());
+console.log("Same add the log for tesing")
+// loaded for the same 
 app.use(cors());
 
 let users = []; // In-memory user storage for simplicity
