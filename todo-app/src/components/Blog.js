@@ -46,6 +46,9 @@ const Blog = ({ token }) => {
         updatePost={updatePost}
         token={token}
       />
+      <div className="crud-app">
+      <CRUD />
+    </div>
     </div>
   );
 };
