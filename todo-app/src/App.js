@@ -20,6 +20,11 @@ const AuthWrapper = () => {
     localStorage.removeItem('token');
     navigate('/login');
   };
+    const handleTrigger = () => {
+    setToken(null);
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
 
   return (
     <div className="blog-app">
