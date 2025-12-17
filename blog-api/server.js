@@ -54,7 +54,8 @@ app.post('/api/login', async (req, res) => {
   }
 
   const token = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
-  res.status(200).json({ message: 'Logged in successfully', token });
+  const revisedToken = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
+  res.status(200).json({ message: 'Logged in successfully', token , revisedToken});
 });
 
 // Middleware to protect routes
