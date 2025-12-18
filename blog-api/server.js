@@ -14,6 +14,7 @@ console.log("Same add the log for tesing")
 app.use(cors());
 
 let users = []; // In-memory user storage for simplicity
+let Data = []; // In-memory user storage for simplicity
 
 // Signup endpoint
 app.post('/api/signup', async (req, res) => {
