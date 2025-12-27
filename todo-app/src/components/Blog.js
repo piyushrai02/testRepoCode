@@ -36,6 +36,12 @@ const Blog = ({ token }) => {
     setPosts(removeArr);
   };
 
+   const AddPost = id => {
+    const AddArr = [...posts].filter(post => post.id !== id);
+    setPosts(AddArr);
+  };
+
+
   return (
     <div>
       <h1>My Professional Blog</h1>
