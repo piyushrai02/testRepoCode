@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const PORT = 5000;
-const CheckPoint = 50400;
+
 const SECRET_KEY = 'supersecretkey'; // In a real app, use environment variables
 
 app.use(bodyParser.json());
@@ -85,6 +85,10 @@ app.post('/api/singup', async (req, res) => {
     return res.status(400).json({ message: 'Username and password are required' });
   }
 
+  if (!username || !password) {
+    return res.status(400).json({ message: 'Username and password are required' });
+  }
+  
   const user = users.find(u => u.username === username);
   if (!user) {
     return res.status(401).json({ message: 'Invalid credentials' });
