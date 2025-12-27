@@ -19,7 +19,7 @@ const AuthWrapper = () => {
   const handleLogout = () => {
     setToken(null);
     localStorage.removeItem('token');
-    navigate('/login');
+    navigate('/register');
   };
     const handleTrigger = () => {
     setToken(null);
