@@ -36,6 +36,25 @@ app.post('/api/signup', async (req, res) => {
   res.status(201).json({ message: 'User registered successfully' });
 });
 
+app.post('/api/register', async (req, res) => {
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+    return res.status(400).json({ message: 'Username and password are required' });
+  }
+
+  const existingUser = users.find(user => user.username === username);
+  if (existingUser) {
+    return res.status(400).json({ message: 'User already exists' });
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+  const newUser = { id: users.length + 1, username, password: hashedPassword };
+  users.push(newUser);
+
+  res.status(201).json({ message: 'User registered successfully' });
+});
+
 // Login endpoint
 app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
