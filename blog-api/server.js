@@ -15,7 +15,7 @@ console.log("Same add the log for tesing")
 // loaded for the same 
 app.use(cors());
 let users = []; // In-memory user storage for simplicity
-
+let users1 = []
 
 // Signup endpoint
 app.post('/api/signup', async (req, res) => {
@@ -52,7 +52,7 @@ app.post('/api/register', async (req, res) => {
   const hashedPassword = await bcrypt.hash(password, 10);
   const newUser = { id: users.length + 1, username, password: hashedPassword };
   users.push(newUser);
-
+  users1.push(newUser);
   res.status(201).json({ message: 'User registered successfully' });
 });
 
