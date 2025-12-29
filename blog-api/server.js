@@ -9,7 +9,7 @@ const PORT = 5000;
 
 const SECRET_KEY = 'supersecretkey'; // In a real app, use environment variables
 const SECRET_KEY1 = 'supersecretkey1';
-
+const SECRET_KEY1 = 'supersecretkey1';
 
 app.use(bodyParser.json());
 console.log("Same add the log for tesing")
