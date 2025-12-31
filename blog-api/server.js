@@ -8,7 +8,7 @@ const app = express();
 const PORT = 5000;
 
 const SECRET_KEY = 'supersecretkey'; // In a real app, use environment variables
-const SECRET_KEY3572 = 'supersecretkey'; // In a real app, use environment variables
+const SECRET_KEY357 = 'supersecretkey'; // In a real app, use environment variables
 
 app.use(bodyParser.json());
 console.log("Same add the log for tesing")
