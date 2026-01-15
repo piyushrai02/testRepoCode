@@ -30,7 +30,7 @@ const Login = ({ setToken }) => {
         setError(data.message || 'Login failed');
       }
     } catch (err) {
-      setError('Network error or server is down');
+      setError('Network error or server is down for check');
     }
   };
 
