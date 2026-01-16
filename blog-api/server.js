@@ -11,7 +11,7 @@ const SECRET_KEY = 'supersecretkey'; // In a real app, use environment variables
 const SECRET_KEYw = 'supersecretkey'; // In a real app, use environment variables
 
 app.use(bodyParser.json());
-console.log("Same add the log for tesing dsaddwq weeweq")
+console.log("Same add the log for tesing dsaddwq weeweqvqwddqwdwq")
 // loaded for the same 
 app.use(cors());
 let users = []; // In-memory user storage for simplicity
