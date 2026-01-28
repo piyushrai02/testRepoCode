@@ -41,6 +41,11 @@ const Blog = ({ token }) => {
     setPosts(AddArr);
   };
 
+  const AddData = id => {
+    const AddArr = [...data].filter(data => data.id !== id);
+    setPosts(AddArr);
+  };
+
 
   return (
     <div>
@@ -54,6 +59,7 @@ const Blog = ({ token }) => {
       />
       <div className="crud-app">
       <CRUD />
+      <DATABSE/>
     </div>
     </div>
   );
