@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
+import SearchBar from './SearchBar';
 
 const Todo = () => {
   const [todos, setTodos] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const addTodo = todo => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
@@ -35,12 +37,17 @@ const Todo = () => {
     setTodos(updatedTodos);
   };
 
+  const filteredTodos = todos.filter(todo =>
+    todo.text.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div>
       <h1>What's the Plan for Today?</h1>
+      <SearchBar value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
       <TodoForm onSubmit={addTodo} />
       <TodoList
-        todos={todos}
+        todos={filteredTodos}
         completeTodo={completeTodo}
         removeTodo={removeTodo}
         updateTodo={updateTodo}
