@@ -5,7 +5,7 @@ const SearchBar =  => {
     <div className="search-bar">
       <input
         type="text"
-        placeholder="Search for the products ..."
+        placeholder="Search for the  ..."
         value={value}
         onChange={onChange}
         className="todo-input search-input"
