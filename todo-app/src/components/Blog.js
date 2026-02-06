@@ -24,7 +24,7 @@ const Blog = ({ token }) => {
     setPosts(newPosts);
   };
 
-  const updatePost = (postId, newValue) => {
+  const updatePost = (postId, newValue) = {
     if (!newValue.title || /^\s*$/.test(newValue.title)) {
       return;
     }
