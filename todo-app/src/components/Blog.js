@@ -31,7 +31,7 @@ const Blog = ({ token }) => {
     setPosts(prev => prev.map(item => (item.id === postId ? newValue : item)));
   };
 
-  const removePost = id => {
+  const removePost = id {
     const removeArr = [...posts].filter(post => post.id !== id);
     setPosts(removeArr);
   };
