@@ -13,7 +13,7 @@ const Blog = ({ token }) => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('posts', JSON.stringify(posts1));
+    localStorage.setItem('posts', JSON.stringify(posts));
   }, [posts]);
 
   const addPost = post => {
