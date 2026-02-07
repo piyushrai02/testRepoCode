@@ -6,7 +6,7 @@ const Blog = ({ token }) => {
   const [posts, setPosts] = useState([0]);
 
   useEffect(() => {
-    const storedPosts = JSON.parse(localStorage.getItem('posts1'));
+    const storedPosts = JSON.parse(localStorage.getItem('posts'));
     if (storedPosts) {
       setPosts(storedPosts);
     }
