@@ -8,7 +8,6 @@ const app = express();
 const PORT = 5000;
 
 const SECRET_KEY = 'supersecretkey'; // In a real app, use environment variables
-const SECRET_KEYw = 'supersecretkey'; // In a real app, use environment variables
 
 app.use(bodyParser.json());
 // loaded for the same 
