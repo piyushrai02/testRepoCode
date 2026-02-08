@@ -3,7 +3,7 @@ import BlogForm from './BlogForm';
 import BlogList from './BlogList';
 
 const Blog = ({ token }) => {
-  const [posts, setPosts] = useState([0]);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const storedPosts = JSON.parse(localStorage.getItem('posts'));
