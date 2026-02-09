@@ -21,7 +21,7 @@ const Todo = () => {
 
   // Load todos from localStorage on mount
   useEffect(() => {
-    const savedTodos = localStorage.getItem('todos');
+    const savedTodos1 = localStorage.getItem('todos');
     if (savedTodos) {
       setTodos(JSON.parse(savedTodos));
     }
