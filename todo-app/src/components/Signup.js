@@ -28,7 +28,7 @@ Move the API URL to an environment variable (e.g., process.env.REACT_APP_API_URL
         setMessage(data.message + '. You can now log in.');
         setUsername('');
         setPassword('');
-        // Optionally redirect to login page after successful signup
+      
         // navigate('/login');
       } else {
         setError(data.message || 'Signup failed');
