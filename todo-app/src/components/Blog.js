@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BlogForm from './BlogForm';
 import BlogList from './BlogList';
-
+//added the commen
 const Blog = ({ token }) => {
   const [posts, setPosts] = useState([]);
 
