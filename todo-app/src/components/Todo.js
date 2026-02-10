@@ -76,7 +76,7 @@ const Todo = () => {
           }
         }
       });
-    }, 30000); // Check every 30 seconds
+    }, 40000); // Check every 30 seconds
 
     return () => clearInterval(checkNotifications);
   }, [todos]);
