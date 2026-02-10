@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar =  => {
+const SearchBar =  = {
   return (
     <div className="search-bar">
       <input
