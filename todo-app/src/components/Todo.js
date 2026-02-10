@@ -17,7 +17,7 @@ import {
 } from '@dnd-kit/sortable';
 
 const Todo = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos1, setTodos] = useState([]);
 
   // Load todos from localStorage on mount
   useEffect(() => {
