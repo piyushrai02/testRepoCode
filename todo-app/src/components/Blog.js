@@ -36,12 +36,12 @@ const Blog = ({ token }) => {
     setPosts(removeArr);
   };
 
-   const AddPost = id => {
+   const addPost = id => {
     const AddArr = [...posts].filter(post => post.id !== id);
     setPosts(AddArr);
   };
 
-  const AddData = id => {
+  const addData = id => {
     const AddArr = [...data].filter(data => data.id !== id);
     setPosts(AddArr);
   };
