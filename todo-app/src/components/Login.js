@@ -55,7 +55,7 @@ const Login = ({ setToken }) => {
         <button type="submit" className="auth-button">Login</button>
         {error && <p className="error-message">{error}</p>}
         <p className="auth-switch">
-          Don't have an account? <a href="/signup">Sign Up</a>
+          Don't have an account data? <a href="/signup">Sign Up</a>
         </p>
       </form>
     </div>
