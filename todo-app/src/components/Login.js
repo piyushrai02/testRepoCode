@@ -27,7 +27,7 @@ const Login = ({ setToken }) => {
         localStorage.setItem('token', data.token);
         navigate('/'); // Redirect to home or blog page
       } else {
-        setError(data.message || 'Login failed');
+        setError(data.message || 'Login failed Error');
       }
     } catch (err) {
       setError('Network error or server is down ');
