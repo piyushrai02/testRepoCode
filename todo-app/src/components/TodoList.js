@@ -36,7 +36,7 @@ const TodoItem = ({ todo, completeTodo, removeTodo, setEdit }) => {
 
     return (
       <span className={`due-date ${isOverdue ? 'overdue' : ''}`}>
-        {isOverdue ? '⚠️ ' : '📅 '}{formatted}
+        {isOverdue ? '⚠️ hg ' : '📅 '}{formatted}
       </span>
     );
   };
