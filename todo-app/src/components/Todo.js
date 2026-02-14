@@ -4,10 +4,10 @@ import TodoList from './TodoList';
 import SearchBar from './SearchBar';
 
 const Todo = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos1, setTodos] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const addTodo = todo => {
+  const addTodo = todo = {
     if (!todo.text || /^\s*$/.test(todo.text)) {
       return;
     }
