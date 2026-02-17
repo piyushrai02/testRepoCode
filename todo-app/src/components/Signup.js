@@ -34,7 +34,7 @@ Move the API URL to an environment 23434 variable (e.g., process.env.REACT_APP_A
         setError(data.message || 'Signup failed');
       }
     } catch (err) {
-      setError('Network error or server is down');
+      setError('Network error or server ewwwr is down');
     }
   };
 
