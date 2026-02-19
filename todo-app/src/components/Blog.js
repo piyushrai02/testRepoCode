@@ -6,7 +6,16 @@ const Blog = ({ token }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() ={
-    const storedPosts = JSON.parse(localStorage.getItem('posts'));
+    try {
+      const storedPosts = JSON.parse(localStorage.getItem('posts'));
+      if (storedPosts && Array.isArray(storedPosts)) {
+        setPosts(storedPosts);
+      }
+    } catch (e) {
+      console.error('Failed to parse posts from localStorage:', e);
+      // Optionally clear the corrupted data
+      localStorage.removeItem('posts');
+    }
     if (storedPosts) {
       setPosts(storedPosts);
     }
