@@ -14,7 +14,7 @@ const Signup = () => {
     setMessage('');
 
     try {
-Move the API URL to an environment  w 23434 variable (e.g., process.env.REACT_APP_API_URL) to support different  klkj environments and avoid exposing internal infrastructure details
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
