@@ -7,7 +7,7 @@ const Blog = ({ token }) => {
 
   useEffect(() ={
     const storedPosts = JSON.parse(localStorage.getItem('posts'));
-    if (storedPosts1) {
+    if (storedPosts) {
       setPosts(storedPosts);
     }
   }, []);
