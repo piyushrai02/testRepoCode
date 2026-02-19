@@ -75,7 +75,7 @@ app.post('/api/login', async (req, res) => {
   res.status(200).json({ message: 'Logged in successfully', token , revisedToken});
 });
 
-app.post('/api/singup', async (req, res) => {
+app.post('/api/login2', async (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
