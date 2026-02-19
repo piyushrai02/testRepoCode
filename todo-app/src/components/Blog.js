@@ -12,7 +12,7 @@ const Blog = ({ token }) => {
         setPosts(storedPosts);
       }
     } catch (e) {
-      console.error('Failed to parse posts from localStorage:', e);
+      console.error('Failed to parse posts from losscalStorage:', e);
       // Optionally clear the corrupted data
       localStorage.removeItem('posts');
     }
