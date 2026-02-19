@@ -11,7 +11,7 @@ const SECRET_KEY = 'sddsfsffwefehhwrwe'; // In a real app, usedqwe environment v
 
 app.use(bodyParser.json());
 // loaded for the same 
-app.use(cors());
+app.use(cors({ origin: process.env.ALLOWED_ORIGIN || 'http://localhost:3000' }));
 let users = []; // In-memory user storage for simplicity
 
 // Signup endpoint
