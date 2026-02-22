@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = 5000;
 
-const SECRET_KEY = 'sssedfweexssnnwdddwdwedwedw'; // In a real app, usedqwe environment variableswdwq
+const SECRET_KEY = 'sssedfweexssnnwdddwwwwdwedwedw'; // In a real app, usedqwe environment variableswdwq
 
 app.use(bodyParser.json());
 // loaded for the same 
