@@ -11,7 +11,7 @@ function BlogForm(props) {
     titleRef.current.focus();
   });
 
-  const handleTitleChange = e = {
+  const handleTitleChange = e => {
     setTitle(e.target.value);
   };
 
