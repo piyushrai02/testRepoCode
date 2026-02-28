@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = 5000;
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY || 'development_fallback_key_should_be_changed_in_production';
+const SECRET_KEY = process.env.JWT_SECRET_KEY
 
 app.use(bodyParser.json());
 // loaded for the same 
