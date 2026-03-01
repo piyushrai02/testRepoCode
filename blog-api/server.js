@@ -11,7 +11,7 @@ const SECRET_KEY = process.env.JWT_SECRET_KEY || 'development-fallback-secret-ch
 
 app.use(bodyParser.json());
 // loaded for the same 
-app.use(cors({ origin: process.env.ALLOWED_ORIGIN || 'http://localhost:3000' }));
+app.use(cors({ origin: process.env.ALLOWED_ORIGIN || 'http://localhost:3001' }));
 let users = []; // In-memory user storage for simplicity
 
 // Signup endpoint
