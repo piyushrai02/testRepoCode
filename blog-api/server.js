@@ -27,7 +27,12 @@ return res.status(400).json({ message: 'Username and password are required' });
     return res.status(400).json({ message: 'User already exists' });
   }
 
-  const hashedPassword = await bcrypt.hash(password, 10);
+  let hashedPassword;
+  try {
+    hashedPassword = await bcrypt.hash(password, 10);
+  } catch (error) {
+    return res.status(500).json({ message: 'Error processing password' });
+  }
   const newUser = { id: users.length + 1, username, password: hashedPassword };
   users.push(newUser);
 
