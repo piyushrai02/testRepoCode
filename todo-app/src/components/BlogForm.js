@@ -95,7 +95,7 @@ function BlogForm(props) {
           <button onClick={handleSubmit} className='blog-button'>
             Add Blog Post
           </button>
-        </>
+        
       )}
     </form>
   );
