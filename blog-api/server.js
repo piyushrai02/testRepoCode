@@ -81,9 +81,8 @@ app.post('/api/login', async (req, res) => {
   }
 
   const token = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
-const token = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
-res.status(200).json({ message: 'Logged in successfully', token });
-});
+  res.status(200).json({ message: 'Logged in successfully', token });
+  });  
 
 app.post('/api/login2', async (req, res) => {
   const { username, password } = req.body;
