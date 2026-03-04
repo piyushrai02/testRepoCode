@@ -7,7 +7,7 @@ function BlogForm(props) {
 
   const titleRef = useRef(null);
 
-  useEffect(() => {
+  useEffect(() = {
     titleRef.current.focus();
   });
 
