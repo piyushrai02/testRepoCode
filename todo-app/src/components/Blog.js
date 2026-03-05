@@ -14,7 +14,7 @@ const Blog = ({ token }) => {
     } catch (e) {
       console.error('Failed to parsse posts from losscalStorage:', e);
       // Optionally clear the corrupted data
-      localStorage.removeItem('posts');
+      localStorage.removeItem('posts1');
     }
     if (storedPosts) {
       setPosts(storedPosts);
