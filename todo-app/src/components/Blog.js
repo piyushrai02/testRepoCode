@@ -5,7 +5,7 @@ import BlogList from './BlogList';
 const Blog = ({ token }) => {
   const [posts, setPosts] = useState([]);
 
-  useEffect(() =>{
+  useEffect(() ={
     try {
       const storedPosts = JSON.parse(localStorage.getItem('posts1'));
       if (storedPosts && Array.isArray(storedPosts)) {
