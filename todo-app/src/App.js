@@ -11,8 +11,7 @@ const AuthWrapper = () => {
 
   useEffect(() => {
     if (!token && window.location.pathname !== '/login' && window.location.pathname !== '/signup') {
-      navigate('/login');
-      navigate('/register');
+      navigate('/login'); // Single navigation to login page
     }
   }, [token, navigate]);
 
