@@ -7,7 +7,11 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = 5000;
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY || 'development-fallback-secret-change-in-production'; // TODO: Use proper secret management
+const SECRET_KEY = process.env.JWT_SECRET_KEY;
+if (!SECRET_KEY) {
+  console.error('FATAL ERROR: JWT_SECRET_KEY environment variable is not set.');
+  process.exit(1);
+}
 
 app.use(bodyParser.json());
 // loaded for the same 
