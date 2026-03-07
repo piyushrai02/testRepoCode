@@ -23,7 +23,7 @@ app.use(cors({ origin: process.env.ALLOWED_ORIGIN || 'http://localhost:3000' }))
 let users = []; // In-memory user storage for simplicity
 
 // Signup endpoint
-app.post('/api/signup1', async (req, res) => {
+app.post('/api/signup', async (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
