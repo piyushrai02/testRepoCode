@@ -8,6 +8,10 @@ const app = express();
 const PORT = 5000;
 
 const SECRET_KEY = process.env.JWT_SECRET_KEY;
+if (!SECRET_KEY || SECRET_KEY.length < 32) {
+  console.error('FATAL ERROR: JWT_SECRET_KEY environment variable must be set and at least 32 characters long.');
+  process.exit(1);
+}
 if (!SECRET_KEY) {
   console.error('FATAL ERROR: JWT_SECRET_KEY environment variable is not set.');
   process.exit(1);
