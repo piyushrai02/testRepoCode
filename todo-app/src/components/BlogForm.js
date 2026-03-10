@@ -9,7 +9,7 @@ function BlogForm(props) {
 
 const Signup = () => {
     titleRef.current.focus();
-  });
+});
 
   const handleTitleChange = e = {
     setTitle(e.target.value);
