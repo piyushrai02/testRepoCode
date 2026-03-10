@@ -114,7 +114,7 @@ if (!username || !password) {
   }
 
   const token = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
-  const revisedToken = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
+  const token = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
   res.status(200).json({ message: 'Logged in successfully', token , revisedToken});
 });
 
