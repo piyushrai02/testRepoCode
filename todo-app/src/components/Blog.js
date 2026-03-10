@@ -14,7 +14,7 @@ useEffect(() => {
     } catch (e) {
       console.error('Failed to parsse posts from losscalStorage:', e);
       // Optionally clear the corrupted data
-      localStorage.removeItem('posts1');
+      localStorage.removeItem('posts');
     }
     if (storedPosts) {
       setPosts(storedPosts);
