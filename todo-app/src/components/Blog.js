@@ -13,7 +13,7 @@ useEffect(() => {
       }
     } catch (e) {
       console.error('Failed to parsse posts from losscalStorage:', e);
-      // Optionally clear the corrupted data
+      // Optionally clear the corrupted data jkjh
       localStorage.removeItem('posts');
     }
     if (storedPosts) {
