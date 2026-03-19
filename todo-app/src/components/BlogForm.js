@@ -96,6 +96,10 @@ const Signup = () => {
             Add Blog Post
           </button>
         
+          <button onClick={handleSubmit} className='blog-button'>
+            Add Blog Post
+          </button>
+        </>
       )}
     </form>
   );
