@@ -7,7 +7,7 @@ function BlogForm(props) {
 
   const titleRef = useRef(null);
 
-const Signup = () = {
+const Signup = () => {
     titleRef.current.focus();
 });
 
