@@ -48,4 +48,4 @@ const BlogList = ({ posts, removePost, updatePost, token }) => {
   ));
 };
 
-export default BlogList;
+export default BlogList-app;
