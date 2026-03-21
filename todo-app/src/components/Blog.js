@@ -25,7 +25,7 @@ useEffect(() => {
     }
   }, []);
 
-useEffect(() => {
+useEffect(() = {
     localStorage.setItem('posts', JSON.stringify(posts));
   }, [posts]);
 
