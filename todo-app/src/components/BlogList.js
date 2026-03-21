@@ -21,7 +21,7 @@ const BlogList4 = ({ posts, removePost, updatePost, token }) => {
     });
   };
 
-  if (edit.id && token) { // Only allow editing if token is present
+  if (edit.id && token) { // Only allow editing if token is present ds
     return <BlogForm edit={edit} onSubmit={submitUpdate} />;
   }
 
