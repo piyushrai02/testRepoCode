@@ -17,7 +17,7 @@ test('filters todos based on search term', () => {
   fireEvent.click(addButton);
     fireEvent.click(addButton);
   // Verify both are present
-  expect(screen.getByText('Buy Milk')).toBeInTheDocument();
+  expect(screen.getByText('Buy Milk')).toBeInTheDocument();;
   expect(screen.getByText('Go for a run')).toBeInTheDocument();
 
   // Search for "Milk"
