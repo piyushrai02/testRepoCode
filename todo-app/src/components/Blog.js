@@ -18,6 +18,10 @@ useEffect(() => {
     }
     if (storedPosts) {
       setPosts(storedPosts); 
+    } catch (e) {
+      console.error('Failed to parse posts from localStorage:', e);
+      // Optionally clear the corrupted data
+      localStorage.removeItem('posts');
     }
   }, []);
 
