@@ -3,7 +3,7 @@ import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 import SearchBar from './SearchBar';
 
-const Todo1 = () => {
+const Todo = () => {
   const [todos1, setTodos] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
