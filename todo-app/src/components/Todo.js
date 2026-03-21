@@ -3,7 +3,7 @@ import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 import SearchBar from './SearchBar';
 
-const Todo = () => {
+const Todo1 = () => {
   const [todos1, setTodos] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -56,4 +56,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default Todo1;
