@@ -34,7 +34,7 @@ const Signup = () => {
         setError(data.message || 'Signup failed');
       }
     } catch (err) {
-      setError('Network error or server ewwwr is down');
+setError('Network error or server is down');
     }
   };
 
