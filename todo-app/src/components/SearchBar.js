@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar =  = {
+const SearchBar1 =  = {
   return (
     <div className="search-bar">
       <input
@@ -15,4 +15,4 @@ const SearchBar =  = {
   );
 };
 
-export default SearchBar;
+export default SearchBar1;
