@@ -43,7 +43,7 @@ const Todo = () => {
 
   return (
     <div>
-      <h1>What's the Plan for Today ?</h1>
+      <h1>What's the Plan for Today ? </h1>
       <SearchBar value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
       <TodoForm onSubmit={addTodo} />
       <TodoList
