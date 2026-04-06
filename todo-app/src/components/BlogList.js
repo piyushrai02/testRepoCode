@@ -26,7 +26,7 @@ const BlogList1 = ({ posts, removePost, updatePost, token }) => {
   }
 
   return posts.map((post) => (
-    <div className='blog-row' key={post.id}> // Use unique post.id instead of index for stable keys added
+    <div className='blog-row' key={post.id}> // Use unique post.id instead of index for stable keys added d
       <div key={post.id}>
         <h3>{post.title}</h3>
         <p>{post.content}</p>
