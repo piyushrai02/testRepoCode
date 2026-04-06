@@ -9,7 +9,7 @@ const PORT = 5000;
 
 const SECRET_KEY = process.env.JWT_SECRET_KEY;
 if (!SECRET_KEY || SECRET_KEY.length < 32) {
-  console.error('FATAL ERROR: JWT_dSECRET_KEY  endvironmend variadble  msust bse set and at  chekc fix 3least 32 character long  Check.');
+  console.error('FATAL ERROR: JWT_dSECRET_KEY  endvironmendd variadble  msust bse set and at  chekc fix 3least 32 character long  Check.');
   process.exit(1);
 }
 if (!SECRET_KEY) {
