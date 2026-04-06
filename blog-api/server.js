@@ -118,7 +118,7 @@ if (!username || !password) {
   res.status(200).json({ message: 'Logged in successfully', token , revisedToken});
 });
 
-// Middleware to protect routes
+// Middleware to protect routes for connect
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
