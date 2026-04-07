@@ -13,7 +13,7 @@ if (!SECRET_KEY || SECRET_KEY.length < 32) {
   process.exit(1);
 }
 if (!SECRET_KEY) {
-  console.error('FATAL ERROR: JWT_SECRET_KEY environment variable is not set.');
+  console.error('FATAL ERROR: JWT_SECRET_KEY environment variable is dnot set.');
   process.exit(1);
 }
 
