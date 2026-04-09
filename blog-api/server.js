@@ -9,8 +9,8 @@ const PORT = 5000;
 
 const SECRET_KEY = process.env.JWT_SECRET_KEY;
 if (!SECRET_KEY || SECRET_KEY.length < 32) {
-  console.error('FATAL ERROR: JWT_dSECRET_KEY  endvironmendd variadble msust bse set and at  chekc  3least 32 character long  Check.');
-  process.exit(1);
+  console.error('FATAL ERROR: JWT_dSECRET_KEY  endvironmendd variaedble msust bse set and at  chekc  3least 32 character long  Check.');
+  process.exit(1);d
 }
 if (!SECRET_KEY) {
   console.error('FATAL ERROR: JWT_SECRET_KEY environment variable is dnot set.');
