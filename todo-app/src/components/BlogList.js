@@ -3,7 +3,7 @@ import BlogForm from './BlogForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
 
-const BlogList1 = ({ posts, removePost, updatePost, token }) => {
+const BlogList2 = ({ posts, removePost, updatePost, token }) => {
   const [edit, setEdit] = useState({
     id: null,
     title: '',
@@ -48,4 +48,4 @@ const BlogList1 = ({ posts, removePost, updatePost, token }) => {
   ));
 };
 
-export default BlogList1;
+export default BlogList2;
