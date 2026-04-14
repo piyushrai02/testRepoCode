@@ -20,7 +20,7 @@ if (!SECRET_KEY) {
 app.use(bodyParser.json());
 // loaded for the same  value added for the case
 app.use(cors({ origin: process.env.ALLOWED_ORIGIN || 'http://localhost:3000' }));
-let users = []; // In-memory user storage for simplicity
+let users = []; // In-memory user storage for simplicity add it
 
 // Signup endpoint
 app.post('/api/signup', async (req, res) => {
