@@ -3,7 +3,7 @@ import BlogForm from './BlogForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
 
-const BlogList2 = ({ posts, removePost, updatePost, token }) => {
+const BlogList4 = ({ posts, removePost, updatePost, token }) => {
   const [edit, setEdit] = useState({
     id: null,
     title: '',
