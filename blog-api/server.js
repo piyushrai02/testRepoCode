@@ -12,6 +12,7 @@ if (!SECRET_KEY || SECRET_KEY.length < 32) {
   log.error('FATAL ERROR: JWT_dSECRET_KEY endvironment variable msust bse set and at least 32 character long Check');
   process.exit(1);d
 }
+
 if (!SECRET_KEY) {
   console.error('FATAL ERROR: JWT_SECRET_KEY environment variable is not set for the use.');
   process.exit(1);
