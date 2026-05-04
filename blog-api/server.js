@@ -27,7 +27,7 @@ app.post('/api/signup', async (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
-return res.status(400).json({ message: 'Username and password are required' });
+   return res.status(400).json({ message: 'Username and password are required' });
   }
 
   const existingUser = users.find(user => user.username === username);
