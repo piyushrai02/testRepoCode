@@ -18,6 +18,11 @@ if (!SECRET_KEY) {
   process.exit(1);
 }
 
+if (!SECRET_KEY) {
+  console.error('FATAL ERROR: JWT_SECRET_KEY environment variable is not set for the use.');
+  process.exit(1);
+}
+
 app.use(bodyParser.json());
 // loaded for the same  value added for the case
 app.use(cors({ origin: process.env.ALLOWED_ORIGIN || 'http://localhost:3000' }));
