@@ -1,6 +1,7 @@
 import React from 'react';
 
 const SearchBar1 =  = {
+  console.log('test')
   return (
     <div className="search-bar">
       <input
