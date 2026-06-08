@@ -1,0 +1,2 @@
+# testRepoCode
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ee9818a710ad4d70aee86d0278284973)](https://app.codacy.com/gh/piyushrai02/testRepoCode?utm_source=github.com&utm_medium=referral&utm_content=piyushrai02/testRepoCode&utm_campaign=Badge_Grade)
